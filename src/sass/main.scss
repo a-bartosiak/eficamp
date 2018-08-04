@@ -1,0 +1,47 @@
+//Vendors
+//@import 'vendors/foundation';
+// Common
+@import 'common/base'; //@import 'common/fonts';
+//@import 'common/icons';
+//@import 'common/mixins';
+//@import 'common/misc';
+//@import 'common/typography';
+//@import 'common/buttons';
+//@import 'common/form-elements';
+//@import 'common/list';
+@import "bootstrap-grid.css";
+@import "bootstrap-grid.min.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #ffffff;
+}
+
+#headerWrapper {
+  background-image: url("../images/background.jpeg");
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  border: 1px solid #ffffff;
+  width: 159.6px;
+  height: 160px;
+  opacity: 0.3;
+}
+
+.loginBox {
+  width: 546px;
+  height: 606px;
+}
