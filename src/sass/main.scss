@@ -11,8 +11,7 @@
 //@import 'common/list';
 @import "bootstrap-grid.css";
 @import "bootstrap-grid.min.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-//@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700'); //@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 * {
   box-sizing: border-box;
@@ -27,7 +26,12 @@ body {
   font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 300;
 }
 
@@ -36,8 +40,9 @@ h1 {
 }
 
 #headerWrapper {
-  background-image: url("../images/background.jpeg");
-  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-position: center;
+  min-height: 100vh;
   width: 100vw;
   background-size: cover;
   display: flex;
@@ -45,12 +50,20 @@ h1 {
   align-items: center;
 }
 
-.logo, .loginBox, .loginForm {
+.loginBox,
+.loginForm,
+.logo {
   border-radius: 1%;
 }
 
-.logo, .loginForm {
+.loginForm,
+.logo {
   border: 1px solid rgba(255, 255, 255, .3);
+}
+
+#logo {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .logo {
@@ -59,33 +72,50 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 74px;
 }
 
 .loginBox {
-  width: 546px;
   height: 606px;
   background-color: #00c2d7;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: auto;
+  }
+  @media (min-width: 1025px) {
+    width: 546px;
+  }
 
-.loginBox h1 {
-  padding-top: 32px;
-}
+  h1 {
+    padding-top: 32px;
+  }
 
-.loginBox span {
-  padding-bottom: 89px;
+  span {
+    padding-bottom: 89px;
+  }
 }
 
 .loginForm {
-  width: 489px;
+  width: 80%;
   height: 253px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 80%;
+  }
+  @media (min-width: 1025px) {
+    width: 489px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 108px;
+  }
 }
 
 .loginForm::before {
@@ -98,30 +128,29 @@ h1 {
   border-radius: 50%;
 }
 
-.loginForm form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 108px;
-}
-
-.loginFormClose {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .loginFormRow {
   display: flex;
   flex-direction: row;
   padding-top: 21px;
   padding-bottom: 21px;
+
+  button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #00cfe0;
+    border: 1px solid #00cfe0;
+    //color: #ffffff;
+    //display: flex;
+    //justify-content: center;
+  }
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
+}
+
+.clientPassword, .close, .buttonPassword {
+  display: none;
 }

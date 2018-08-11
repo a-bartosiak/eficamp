@@ -12,41 +12,52 @@
   <header id="headerWrapper">
     <div class="container">
       <div class="row">
-        <div class="col-sm">
+        <div id="logo" class="col-sm-12 col-md-3">
           <div class="logo">
-            efi<sup>3</sup>
+            <img src="../images/logo.png">
           </div>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-6">
           <div class="loginBox">
-                <h1>Login</h1>
-                <span>
+            <h1>Login</h1>
+            <span>
                   Aby, zaimportować dane zaloguj się do swojego banku
                 </span>
-                <div class="loginForm">
-                  <form>
-                    <div class="loginFormRow">
-                    <p>127633223</p><button class="loginFormClose">x</button>
-                  </div>
-                    <input></input>
-                    <div class="loginFormRow">
-                    <p>Select other</p>
-                    <input type="submit" value="Go">
-                  </div>
-                  </form>
+            <div class="loginForm">
+              <form>
+                <input class="clientNo" placeholder="wpisz numer klienta"></input>
+                <button type="submit" id="button">Wyślij</button>
+                <p id="result" class="result"></p><button class="close">x</button>
+                <input class="clientPassword" placeholder="wpisz hasło"></input>
+                <button type="submit" class="buttonPassword">Go</button>
+
+                <!-- <div class="loginFormRow">
+                  <p>127633223</p><button><span class="close rounded black"></span></button>
                 </div>
+                <input></input>
+                <div class="loginFormRow">
+                  <p>Select other</p>
+                  <input type="submit" value="Go">
+                </div> -->
+              </form>
+            </div>
           </div>
           <nav>
             <a href="#">Security</a>
             <a href="#">Loggin in</a>
             <a href="#">Contact</a>
             <a href="#">f</a>
-        </nav>
+          </nav>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-3">
         </div>
       </div>
   </header>
+  <!-- <section>
+    <input class="text-input"></input>
+    <button id="button">klik</button>
+    <p id="result" class="result"></p>
+  </section> -->
   <script src="js/app.js"></script>
 </body>
 
