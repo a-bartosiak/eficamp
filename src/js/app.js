@@ -3,31 +3,23 @@
 
     const button = document.querySelector("#button");
     const input = document.querySelector(".clientNo");
-    const result = document.querySelector("#result");
-    const password = document.querySelector(".clientPassword");
+    const result = document.querySelector(".result");
+    const loginFirstStep = document.querySelector("#loginFirstStep");
+    const loginSecondStep = document.querySelector("#loginSecondStep");
     const closeButton = document.querySelector('.close');
-    const passwordButton = document.querySelector('.buttonPassword');
 
     button.addEventListener("click", (event) => {
       event.preventDefault();
       result.innerText = input.value;
-      input.style.display = "none";
-      button.style.display = "none";
-      result.style.display = "block";
-      password.style.display = "block";
-      closeButton.style.display = "block";
-      passwordButton.style.display = "block";
+      loginSecondStep.style.display = "block";
+      loginFirstStep.style.display = "none";
     })
 
 
     closeButton.addEventListener("click", (event) => {
       event.preventDefault();
-      button.style.display = "block";
-      input.style.display = "block";
-      closeButton.style.display = "none";
-      password.style.display = "none";
-      result.style.display = "none";
-      passwordButton.style.display = "none";
+      loginSecondStep.style.display = "none";
+      loginFirstStep.style.display = "flex";
       input.value = "";
     })
 

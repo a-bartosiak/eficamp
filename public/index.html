@@ -3,9 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Efi Camp Login</title>
   <link rel="stylesheet" href="css/main.css" />
-
 </head>
 
 <body>
@@ -25,27 +24,30 @@
                 </span>
             <div class="loginForm">
               <form>
-                <input class="clientNo" placeholder="wpisz numer klienta"></input>
-                <button type="submit" id="button">Wyślij</button>
-                <p id="result" class="result"></p><button class="close">x</button>
-                <input class="clientPassword" placeholder="wpisz hasło"></input>
-                <button type="submit" class="buttonPassword">Go</button>
-
-                <!-- <div class="loginFormRow">
-                  <p>127633223</p><button><span class="close rounded black"></span></button>
+                <div id="loginFirstStep">
+                  <input class="clientNo" placeholder="wpisz numer klienta"></input>
+                  <button type="submit" id="button">Wyślij</button>
                 </div>
-                <input></input>
-                <div class="loginFormRow">
-                  <p>Select other</p>
-                  <input type="submit" value="Go">
-                </div> -->
+                <div id="loginSecondStep">
+                  <div class="loginFormRow">
+                    <p class="result"></p><button class="close"></button>
+                  </div>
+                  <div class="loginFormRow">
+                    <input class="clientPassword" placeholder="wpisz hasło"></input>
+                    <img src="../images/keyboard.png">
+                  </div>
+                  <div class="loginFormRow">
+                    <p>SELECT OTHER</p>
+                    <button type="submit" class="buttonPassword">GO</button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
           <nav>
-            <a href="#">Security</a>
-            <a href="#">Loggin in</a>
-            <a href="#">Contact</a>
+            <a href="dashboard.html">SECURITY</a>
+            <a href="#">LOGGIN IN</a>
+            <a href="#">CONTACT</a>
             <a href="#">f</a>
           </nav>
         </div>
