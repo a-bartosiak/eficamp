@@ -22,7 +22,7 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 8px;
   font-weight: 300;
 }
 
@@ -36,7 +36,7 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #headerWrapper {
@@ -52,7 +52,8 @@ h1 {
 
 .loginBox,
 .loginForm,
-.logo, .productsBoxes {
+.logo,
+.productsBoxes {
   border-radius: 2%;
 }
 
@@ -63,42 +64,45 @@ h1 {
 
 #logo {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+  @media (min-width: 769px) {
+    justify-content: flex-end;
+  }
 }
 
 .logo {
-  width: 159.6px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  img {
+    width: 48px;
+    height: 37px;
+  }
 }
 
 .loginBox {
-  height: 606px;
+  height: 303px;
   background-color: #00c2d7;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 769px) and (max-width: 1024px) {
-    width: auto;
-  }
-  @media (min-width: 1025px) {
-    width: 546px;
-  }
 
   h1 {
-    padding-top: 32px;
+    padding-top: 16px;
   }
 
   span {
-    padding-bottom: 89px;
+    padding-bottom: 45px;
   }
 }
 
 .loginForm {
   width: 80%;
-  height: 253px;
+  height: 127px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -107,14 +111,14 @@ h1 {
     width: 80%;
   }
   @media (min-width: 1025px) {
-    width: 489px;
+    width: 245px;
   }
 
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 74px;
+    padding-top: 37px;
   }
 
   .loginFormRow {
@@ -122,44 +126,52 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
     button,
     img {
-      margin-left: 10px;
+      margin-left: 5px;
     }
   }
 }
 
 .loginForm::before {
   content: "";
-  top: -50px;
+  top: -25px;
   position: absolute;
   background-color: #ffffff;
-  width: 94px;
-  height: 94px;
+  width: 47px;
+  height: 47px;
   border-radius: 50%;
 }
 
 #loginFirstStep,
 #loginSecondStep {
   button {
-    width: 118px;
-    height: 31px;
+    font-size: 6px;
+    width: 59px;
+    height: 16px;
     background-color: #ffffff;
   }
 
   input {
-    width: 409px;
-    height: 35px;
+    width: 205px;
+    height: 18px;
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 90%;
+    }
+    @media (min-width: 1025px) {
+      width: 205px;
+    }
   }
 
   .close {
     background-image: url("../images/x.png");
     background-position: center;
-    width: 18px;
-    height: 18px;
+    background-size: contain;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     background-color: #00cfe0;
     border: 1px solid #00cfe0;
@@ -173,7 +185,7 @@ h1 {
   align-items: center;
 
   input {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 
@@ -181,12 +193,21 @@ h1 {
   display: none;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-}
-//Here starts dashboard.html styling
+nav {
+  padding-top: 10px;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 5px;
+  }
 
+  a:last-child {
+    padding-right: 5px;
+    float: right;
+  }
+}
+
+//Here starts dashboard.html styling
 #dashboard {
   background-color: #dadbdb;
   min-height: 100vh;
