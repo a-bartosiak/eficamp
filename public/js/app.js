@@ -63,5 +63,4 @@ buttonPassword.addEventListener("click", (event) => {
   });
   });
 
-  
 })();

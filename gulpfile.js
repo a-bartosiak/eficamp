@@ -39,7 +39,7 @@ gulp.task('sass', () => {
 gulp.task('js', () => {
     const dst = 'public/js/';
 
-    return gulp.src('./src/js/app.js')
+    return gulp.src('./src/js/*.js')
         .pipe(plumber())
         .pipe(gulp.dest(dst))
         .pipe(browserSync.reload({

@@ -212,12 +212,33 @@ nav {
   background-color: #dadbdb;
   min-height: 100vh;
   min-width: 100vw;
+  font-size: 15px;
   //Here start navigation menu
   header {
     height: 120px;
     background-color: #00cfe0;
     display: flex;
     align-items: center;
+  }
+
+  .desktopMenu {
+    display: none;
+    @media (min-width: 767px) {
+      display: flex;
+    }
+  }
+
+  .mobileMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logoMobile {
+      height: 37px;
+      width: 49px;
+    }
+    @media (min-width: 767px) {
+      display: none;
+    }
   }
 
   .user {
@@ -247,12 +268,17 @@ nav {
     .userData {
       width: 115px;
       font-size: 20px;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
     }
 
     .userInfo {
       img {
         height: 10px;
         width: auto;
+        padding-right: 18px;
       }
     }
   }
@@ -272,7 +298,6 @@ nav {
         width: 30px;
       }
     }
-
     a:hover {
       background-color: #000000;
       height: 120px;
@@ -317,6 +342,27 @@ nav {
     }
   }
 
+  .accountsAnalysis {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .offOnButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    width: 80px;
+    height: 30px;
+    button {
+      background-color: #dadbdb;
+      color: black;
+      width: 38px;
+      height: 25px;
+    }
+  }
+
   .chart {
     height: 248px;
   }
@@ -338,9 +384,25 @@ nav {
     }
   }
 
+  .productsBoxesBlue {
+    height: 88px;
+    width: 100%;
+    background-color: #13bdd2;
+    margin-bottom: 11px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img {
+      height: 38px;
+      width: 38px;
+      margin-right: 13px;
+      margin-left: 18px;
+    }
+  }
+
   .history {
     height: 325px;
-    width: auto;
+    width: 100%;
     background-color: #ffffff;
   }
 }
