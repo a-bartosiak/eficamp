@@ -41,7 +41,7 @@
       balance.innerHTML = finance.balance;
       availableFunds.innerHTML = finance.funds;
       scheduledPayments.innerHTML = finance.payments;
-      console.log(finance);
+      //console.log(finance);
     }).catch(function(error) {
       console.log('Error on Authentication');
     });
