@@ -18,10 +18,14 @@
   margin: 0;
   padding: 0;
 }
+$base-color: #ffffff;
+$mint-blue: #00c2d7;
+$black: #000000;
+$grey: #dadbdb;
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  color: #ffffff;
+  color: $base-color;
   font-size: 8px;
   font-weight: 300;
 }
@@ -53,7 +57,8 @@ h1 {
 .loginBox,
 .loginForm,
 .logo,
-.productsBoxes {
+.productsBoxes,
+canvas {
   border-radius: 2%;
 }
 
@@ -86,7 +91,7 @@ h1 {
 
 .loginBox {
   height: 303px;
-  background-color: #00c2d7;
+  background-color: $mint-blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,7 +145,7 @@ h1 {
   content: "";
   top: -25px;
   position: absolute;
-  background-color: #ffffff;
+  background-color: $base-color;
   width: 47px;
   height: 47px;
   border-radius: 50%;
@@ -152,7 +157,7 @@ h1 {
     font-size: 6px;
     width: 59px;
     height: 16px;
-    background-color: #ffffff;
+    background-color: $base-color;
   }
 
   input {
@@ -173,8 +178,8 @@ h1 {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: #00cfe0;
-    border: 1px solid #00cfe0;
+    background-color: $mint-blue;
+    border: 1px solid $mint-blue;
   }
 }
 
@@ -195,8 +200,9 @@ h1 {
 
 nav {
   padding-top: 10px;
+
   a {
-    color: #ffffff;
+    color: $base-color;
     text-decoration: none;
     padding-right: 5px;
   }
@@ -206,16 +212,16 @@ nav {
     float: right;
   }
 }
-
 //Here starts dashboard.html styling
+
 #dashboard {
-  background-color: #dadbdb;
+  background-color: $grey;
   min-height: 100vh;
   min-width: 100vw;
   font-size: 15px;
   //Here start navigation menu
   header {
-    background-color: #00cfe0;
+    background-color: $mint-blue;
     display: flex;
     align-items: center;
     height: 60px;
@@ -236,6 +242,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     .logoMobile {
       height: 37px;
       width: 49px;
@@ -293,7 +300,6 @@ nav {
     height: 100%;
     padding-top: 0;
     //position: absolute;
-
     a {
       width: 25%;
       display: flex;
@@ -306,17 +312,19 @@ nav {
         width: 30px;
       }
     }
+
     a:hover {
-      background-color: #000000;
+      background-color: $black;
       height: 120px;
       position: relative;
     }
+
     a:hover::before {
       content: "";
       bottom: -7px;
       right: 18px;
       position: absolute;
-      background-color: #000000;
+      background-color: $black;
       width: 16px;
       height: 16px;
       border-radius: 50%;
@@ -337,7 +345,7 @@ nav {
   }
   //Here starts dashboard userData
   .dashboardData {
-    color: #000000;
+    color: $black;
 
     h1 {
       font-size: 50px;
@@ -351,8 +359,8 @@ nav {
       width: 80px;
       height: 30px;
       border-radius: 4px;
-      background-color: #13bdd2;
-      color: #ffffff;
+      background-color: $mint-blue;
+      color: $base-color;
     }
 
     .financeLifeStream {
@@ -382,25 +390,31 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffffff;
+    background: $base-color;
     width: 80px;
     height: 30px;
+
     button {
-      background-color: #dadbdb;
-      color: black;
+      background-color: $grey;
+      color: $black;
       width: 38px;
       height: 25px;
     }
   }
 
   .chart {
-    height: 248px;
+    height: 280px;
+
+    canvas {
+      height: 268px !important;
+      background-color: $base-color;
+    }
   }
 
   .productsBoxes {
     height: 88px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $base-color;
     margin-bottom: 11px;
     display: flex;
     flex-direction: row;
@@ -417,11 +431,12 @@ nav {
   .productsBoxesBlue {
     height: 88px;
     width: 100%;
-    background-color: #13bdd2;
+    background-color: $mint-blue;
     margin-bottom: 11px;
     display: flex;
     flex-direction: row;
     align-items: center;
+
     img {
       height: 38px;
       width: 38px;
@@ -433,6 +448,6 @@ nav {
   .history {
     height: 325px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: $base-color;
   }
 }

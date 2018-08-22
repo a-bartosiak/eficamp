@@ -28,19 +28,19 @@
         </div>
         <div class="col-md-4">
           <nav>
-              <a href="#">
+            <a href="#">
                 <img src="../images/home.png">
                 Home
               </a>
-              <a href="#">
+            <a href="#">
                 <img src="../images/analysis.png">
                 Analyse
               </a>
-              <a href="#">
+            <a href="#">
                 <img src="../images/plan.png">
                 Plan
               </a>
-              <a href="#">
+            <a href="#">
                 <img src="../images/earn.png">
                 Earn
               </a>
@@ -85,16 +85,18 @@
       </div>
       <div class="col-md-3">
         <div class="accountsAnalysis">
-        Accounts analysis
-        <div class="offOnButtons">
-          <button>OFF</button>
-          <button>ON</button>
+          Accounts analysis
+          <div class="offOnButtons">
+            <button>OFF</button>
+            <button>ON</button>
+          </div>
         </div>
-      </div>
       </div>
     </div>
     <div class="row chart">
-      Wykres
+      <div class="col-md-12">
+        <canvas id="myChart"></canvas>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-6">
@@ -133,11 +135,13 @@
       </div>
     </div>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.2/qs.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
   <script src="js/finance.js"></script>
   <script src="js/products.js"></script>
   <script src="js/history.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.2/qs.js"></script>
 </body>
 
 </html>
