@@ -299,7 +299,6 @@ nav {
     flex-direction: row;
     height: 100%;
     padding-top: 0;
-    //position: absolute;
     a {
       width: 25%;
       display: flex;
@@ -372,6 +371,15 @@ nav {
       }
     }
 
+    .fundsMobile {
+      display: flex;
+      height: 52px;
+      padding-top: 14px;
+      @media (min-width: 767px) {
+        display: none;
+      }
+    }
+
     .financeData {
       display: none;
       @media (min-width: 767px) {
@@ -404,6 +412,7 @@ nav {
 
   .chart {
     height: 280px;
+    padding-top: 25px;
 
     canvas {
       height: 268px !important;
